@@ -1,0 +1,90 @@
+body{ 
+    margin: 0 px;
+}
+
+/*mobile rule*/
+header {
+    /*Sets background color of header*/
+    background-color: #0b1c51;
+    /*add 40 pixels so that main content
+     is not so close to content*/
+     margin-bottom: 40 px;
+     
+}
+
+header h1 {
+    font-family: 'Montserrat',Times New Roman, Times, serif;
+    /*make color white of font*/
+    color: #fff;
+    /*make font for mobile title 52 pixels*/
+    font-size: 52px;
+    /*center the text*/
+    text-align: center;
+    /*remove space and default margin around h1*/
+    margin: 0;
+    /*pushes text down 20 pixels from top of page*/
+    padding-top: 20px;
+}
+
+
+header nav {
+    font-family:'Montserrat',Times New Roman, Times, serif;
+    /*turn display property from default to flex*/
+    display: flex;
+    /*centers the defined display flex*/
+    justify-content: center;
+
+}
+
+header nav ul {
+    /*sets display property from defalut to flex*/
+    display: flex;
+    /*removes padding from the left of the list*/
+    padding-left: 0;
+    /*removes bullet points from nav list*/
+    list-style: none;
+}
+
+header nav ul li a {
+    /*make color of link white*/
+    color: #fff;
+    /*removes under line on link for mobile display*/
+    text-decoration: none;
+    /*apply 20 pixels to the right of each link for space*/
+    margin: 0 20px;
+}
+header nav ul li:last-child a{
+    /*removes the margin to the right of the last anchor tag
+    so that new nav appears centered*/
+  margin-right: 0;
+  }
+
+/*media query to element selector for responsive browser 
+and web design to adapt to desktop*/
+
+@media all and (min-width: 600px){
+    header{
+        /*changes default display to flex*/
+        display:flex;
+        /*pushes the title and nav to far sides of browser*/
+        justify-content: space-between;
+        /*adds 0 pixel top and bottom and 30 pixel padding left and right*/
+        padding: 0 30px;
+    }
+    header h1{
+        /*sets title to 48 pixels for desktop layout*/
+        font-size: 48px;
+        /*sets 14 pixel margin above and below 'h1' and 0 pixel to left and right margin*/
+        margin: 14px 0;
+        /*removes or sets padding to 0 above 'h1' element*/
+        padding-top: 0;
+    }
+    header nav{
+        /*pushes nav down 8 pixels for visual appearance*/
+        margin-top: 8px;
+    }
+    header nav ul li a:hover{
+        /*returns hover feature to link for desktop*/
+        color: #bdbdbd;
+    }
+}
